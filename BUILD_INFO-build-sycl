@@ -1,0 +1,4 @@
+Built: 2026-04-25 09:41:28
+Commit: 9725a313b CUDA: reduce MMQ stream-k overhead (#22298)
+Built: 2026-05-03 11:08:29
+Commit: d05fe1d7d fix: CUDA device PCI bus ID de-dupe OOMing (ignoring other 3 gpus entirely) (#22533)

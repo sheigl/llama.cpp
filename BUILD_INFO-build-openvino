@@ -1,0 +1,2 @@
+Built: 2026-05-04 14:51:14
+Commit: d05fe1d7d fix: CUDA device PCI bus ID de-dupe OOMing (ignoring other 3 gpus entirely) (#22533)
