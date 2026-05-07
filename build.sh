@@ -8,8 +8,10 @@ record_build_info() {
     echo "Built: $BUILD_DATE" >> "./BUILD_INFO-$build_dir"
     echo "Commit: $COMMIT" >> "./BUILD_INFO-$build_dir"
     echo "---"
-    cat "./BUILD_INFO-$build_dir"
+    cat "../BUILD_INFO-$build_dir"
 }
+
+cd ./llama.cpp
 
 if [[ $1 == "SYCL" ]]; then
     echo "Building for Intel..."

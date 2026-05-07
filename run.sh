@@ -20,7 +20,7 @@ if [[ "$BUILD_DIR" == *"vulkan"* ]]; then
    echo "USING VULKAN"
 fi
 
-/mnt/1TB/AI/llama.cpp/$BUILD_DIR/bin/llama-server \
+/mnt/1TB/AI/llama.cpp/llama.cpp/$BUILD_DIR/bin/llama-server \
     --models-preset /mnt/1TB/AI/llama.cpp/models.ini \
     --port $PORT \
     --host 0.0.0.0 \
