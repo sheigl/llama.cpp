@@ -1,4 +1,22 @@
-Built: 2026-04-25 09:41:28
-Commit: 9725a313b CUDA: reduce MMQ stream-k overhead (#22298)
-Built: 2026-05-03 11:08:29
-Commit: d05fe1d7d fix: CUDA device PCI bus ID de-dupe OOMing (ignoring other 3 gpus entirely) (#22533)
+Built: 2026-05-06 20:58:58
+Commit: c541e4a paths
+Built: 2026-05-06 21:10:09
+Commit: c541e4a paths
+Built: 2026-05-06 21:49:47
+Commit: c541e4a paths
+Built: 2026-05-07 16:32:30
+Commit: c541e4a paths
+Built: 2026-05-11 19:29:47
+Commit: b484750 mtp
+Built: 2026-05-15 11:38:06
+Commit: b484750 mtp
+Built: 2026-05-15 13:31:05
+Commit: 8be178670 webui: fix theme from --webui-config-file not applied on first load (fresh localStorage) (#22902)
+Built: 2026-05-16 11:17:48
+Commit: 0253fb21f ui: Add request timeout for MCP tool calls (#23138)
+Built: 2026-05-17 21:02:24
+Commit: dd7cad719 cmake : do not check for bin install dir (#23234)
+Built: 2026-05-18 18:37:11
+Commit: 9a532ae4b hexagon: add support for TRI op (#22822)
+Built: 2026-05-19 19:58:39
+Commit: b28a2f372 opencl: add MoE support for q4_k, q5_k, q6_k on Adreno (#23303)

@@ -1,2 +1,14 @@
-Built: 2026-05-06 18:31:41
-Commit: 2496f9c14 mtmd : support MiniCPM-V 4.6 (#22529)
+Built: 2026-05-06 21:32:19
+Commit: c541e4a paths
+Built: 2026-05-06 21:55:57
+Commit: c541e4a paths
+Built: 2026-05-10 07:39:10
+Commit: b484750 mtp
+Built: 2026-05-10 08:07:03
+Commit: b484750 mtp
+Built: 2026-05-15 11:49:34
+Commit: cc7200bf1 Refactor: convert_hf_to_gguf.py (#17114)
+Built: 2026-05-16 13:57:35
+Commit: 0253fb21f ui: Add request timeout for MCP tool calls (#23138)
+Built: 2026-05-18 11:12:15
+Commit: 3a9c1b854 ui: Update KaTeX package and clean up logs from `sass` warnings (#23275)

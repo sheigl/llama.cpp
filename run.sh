@@ -12,7 +12,7 @@ fi
 
 if [[ "$BUILD_DIR" == *"openvino"* ]]; then
    source /opt/intel/openvino/setupvars.sh
-   export GGML_OPENVINO_DEVICE=GPU.0
+   export GGML_OPENVINO_DEVICE=GPU.1
    echo "USING OPENVINO"
 fi
 
