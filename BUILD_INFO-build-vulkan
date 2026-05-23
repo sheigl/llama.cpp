@@ -12,3 +12,5 @@ Built: 2026-05-16 13:57:35
 Commit: 0253fb21f ui: Add request timeout for MCP tool calls (#23138)
 Built: 2026-05-18 11:12:15
 Commit: 3a9c1b854 ui: Update KaTeX package and clean up logs from `sass` warnings (#23275)
+Built: 2026-05-21 19:04:52
+Commit: 4f0e43da6 CUDA: fix PDL CC check for JIT compilation (#23471)

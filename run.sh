@@ -5,7 +5,7 @@ BUILD_DIR=${BUILD_DIR:-build-sycl}
 if [[ "$BUILD_DIR" == *"sycl"* ]]; then
     source /opt/intel/oneapi/setvars.sh
     export ZES_ENABLE_SYSMAN=1
-    #export GGML_SYCL_DISABLE_OPT=1
+    export GGML_SYCL_DISABLE_OPT=0
     export GGML_SYCL_VISIBLE_DEVICES=0,1
     echo "SYSMAN ENABLED"
 fi
@@ -25,5 +25,6 @@ fi
     --port $PORT \
     --host 0.0.0.0 \
     -t 8 \
-    -sm layer 
-    2>&1 | tee /tmp/llama-8080.log
+    -sm layer \
+    -lv 4 \
+    2>&1 | tee /tmp/llama.log

@@ -20,3 +20,9 @@ Built: 2026-05-18 18:37:11
 Commit: 9a532ae4b hexagon: add support for TRI op (#22822)
 Built: 2026-05-19 19:58:39
 Commit: b28a2f372 opencl: add MoE support for q4_k, q5_k, q6_k on Adreno (#23303)
+Built: 2026-05-21 18:45:34
+Commit: 4f0e43da6 CUDA: fix PDL CC check for JIT compilation (#23471)
+Built: 2026-05-22 12:15:50
+Commit: 1acee6bf8 server: only parse empty msg if continuing an assistant msg (#23506)
+Built: 2026-05-23 10:58:32
+Commit: b0df4c0cf model : add NVFP4 MTP scale tensors (#23563)

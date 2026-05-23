@@ -12,6 +12,8 @@ record_build_info() {
 
 cd ./llama.cpp
 
+git pull
+
 if [[ $1 == "SYCL" ]]; then
     echo "Building for Intel..."
     source /opt/intel/oneapi/setvars.sh
