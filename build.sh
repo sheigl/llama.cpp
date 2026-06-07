@@ -19,7 +19,7 @@ if [[ $1 == "SYCL" ]]; then
     source /opt/intel/oneapi/setvars.sh
     rm -r ./build-sycl
     mkdir build-sycl
-    cmake -B build-sycl -DGGML_RPC=ON -DGGML_SYCL=ON -DCMAKE_C_COMPILER=icx -DCMAKE_CXX_COMPILER=icpx -DGGML_SYCL_F16=ON -DMAKE_ASM_COMPILER=/opt/intel/oneapi/compiler/2026.0/bin/icx
+    cmake -B build-sycl -DGGML_RPC=ON -DGGML_SYCL=ON -DCMAKE_C_COMPILER=icx -DCMAKE_CXX_COMPILER=icpx -DGGML_SYCL_F16=ON
     cmake --build build-sycl --config Release -j 8
     record_build_info build-sycl
 fi

@@ -1,15 +1,13 @@
 #!/bin/bash
 MODEL=${1}
-MODEL_ALIAS=${2}
-PORT=${3}
 BUILD_DIR=build-vulkan
 GPU_DEVICES=${GPU_DEVICES:-0,1}
 
 if [[ "$@" == *"SYCL"* ]]; then
     source /opt/intel/oneapi/setvars.sh
     export ZES_ENABLE_SYSMAN=1
-    export GGML_SYCL_VISIBLE_DEVICES=$GPU_DEVICES
-    export ONEAPI_DEVICE_SELECTOR="level_zero:0"
+    #export GGML_SYCL_VISIBLE_DEVICES=$GPU_DEVICES
+    #export ONEAPI_DEVICE_SELECTOR="level_zero:0"
     BUILD_DIR=build-sycl
     echo "SYSMAN ENABLED"
 fi
@@ -21,8 +19,17 @@ if [[ "$@" == *"OPENVINO"* ]]; then
    echo "USING OPENVINO"
 fi
 
-/mnt/1TB/AI/llama.cpp/$BUILD_DIR/bin/llama-bench \
+/mnt/1TB/AI/llama.cpp/llama.cpp/$BUILD_DIR/bin/llama-bench \
     --model $MODEL \
-    -p 4096 \
+    -p 8192 \
+    -fa on \
+    -ngl 99 \
+    --mmap \
+    -v \
+    --progress \
+    -ctk q8_0 \
+    -ctv q8_0 \
+    -b 4096 \
+    -ub 4096 \
     -n 256 \
     -r 3

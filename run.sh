@@ -7,6 +7,7 @@ if [[ "$BUILD_DIR" == *"sycl"* ]]; then
     export ZES_ENABLE_SYSMAN=1
     export GGML_SYCL_DISABLE_OPT=0
     export GGML_SYCL_VISIBLE_DEVICES=0,1
+    export UR_L0_ENABLE_RELAXED_ALLOCATION_LIMITS=1
     echo "SYSMAN ENABLED"
 fi
 
