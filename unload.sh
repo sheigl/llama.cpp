@@ -2,11 +2,11 @@
 
 # Unload all loaded models by default, or unload a specific model by name
 
-API_URL="http://localhost:8080"
+API_URL=${API_URL:-"http://localhost:8080"}
 
 if [ -z "$1" ]; then
   # No argument: unload ALL loaded models
-  echo "Fetching loaded models..."
+  echo "Fetching loaded models from $API_URL..."
   MODELS=$(curl -s -X GET "$API_URL/models" | jq -r '.data[] | select(.status.value == "loaded") | .id')
   
   if [ -z "$MODELS" ]; then

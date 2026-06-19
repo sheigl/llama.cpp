@@ -40,3 +40,15 @@ Built: 2026-06-04 16:26:52
 Commit: 7c158fbb4 server : disable on-device spec checkpoints (#24108)
 Built: 2026-06-05 21:44:20
 Commit: 308f61c31 opencl: improve get_rows, cpy, concat and q6_k flat gemv (#24160)
+Built: 2026-06-07 12:13:00
+Commit: f0156d140 kv-cache: follow the source cache size when sharing cells (#24267)
+Built: 2026-06-15 09:48:59
+Commit: f0156d140 kv-cache: follow the source cache size when sharing cells (#24267)
+Built: 2026-06-15 15:56:56
+Commit: f0156d140 kv-cache: follow the source cache size when sharing cells (#24267)
+Built: 2026-06-15 16:03:14
+Commit: f0156d140 kv-cache: follow the source cache size when sharing cells (#24267)
+Built: 2026-06-15 16:55:21
+Commit: f0156d140 kv-cache: follow the source cache size when sharing cells (#24267)
+Built: 2026-06-19 17:19:11
+Commit: f0156d140 kv-cache: follow the source cache size when sharing cells (#24267)

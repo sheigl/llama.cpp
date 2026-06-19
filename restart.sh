@@ -1,3 +1,3 @@
 #!/bin/bash
-
-sudo systemctl restart llamacpp && sudo journalctl -u llamacpp -f
+SERVICE_NAME=${SERVICE_NAME:-llamacpp}
+sudo systemctl restart $SERVICE_NAME && sudo journalctl -u $SERVICE_NAME -f

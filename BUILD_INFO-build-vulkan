@@ -14,3 +14,5 @@ Built: 2026-05-18 11:12:15
 Commit: 3a9c1b854 ui: Update KaTeX package and clean up logs from `sass` warnings (#23275)
 Built: 2026-05-21 19:04:52
 Commit: 4f0e43da6 CUDA: fix PDL CC check for JIT compilation (#23471)
+Built: 2026-06-15 09:53:23
+Commit: f0156d140 kv-cache: follow the source cache size when sharing cells (#24267)
