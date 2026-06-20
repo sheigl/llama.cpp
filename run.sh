@@ -29,4 +29,5 @@ fi
     -t 8 \
     -sm layer \
     -lv 4 \
+    --slot-save-path /mnt/1TB/AI/llama.cpp/save-slots \
     2>&1 | tee /tmp/llama-${BACKEND}.log

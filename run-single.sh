@@ -11,11 +11,13 @@ CMD=(
     --port 8081 
     --host 0.0.0.0 
     --model /mnt/1TB/AI/chat_models/mtp/Qwen3.6-27B-UD-Q4_K_XL.gguf 
-    --mmproj /mnt/1TB/AI/chat_models/mtp/mmproj-BF16-Qwen3.6-27B.gguf 
+    --mmproj /mnt/1TB/AI/chat_models/mtp/mmproj-BF16-Qwen3.6-27B.gguf
+    --chat-template-file /mnt/1TB/AI/llama.cpp/qwen3.6_chat_template.jinja
+    --slot-save-path /mnt/1TB/AI/llama.cpp/save-slots
     --alias qwen3.6-27b-coder 
     --ctx-size 65536 
-    --batch-size 8192
-    --ubatch-size 8192 
+    --batch-size 4096
+    --ubatch-size 4096 
     --device SYCL1
     --tensor-split 0 
     --temp 0.3
