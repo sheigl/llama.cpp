@@ -1236,6 +1236,12 @@ static vk_fa_tuning_params get_fa_tuning_params_scalar(const vk_device& device, 
 
     const bool reduce_block_rows = D & 8 || n_kv < 1024 || device->vendor_id == VK_VENDOR_ID_INTEL;
 
+    // GCN has no shaderFloat16, so the scalar FA shader keeps K/V tiles in fp32 registers.
+    // With head sizes >= 512 the 16-row tile that long KV lengths select does not fit and the
+    // shader spills: measured 2150 -> 280 GF/s per call on Polaris (RX 480) once n_kv >= 1024,
+    // while 256-wide heads are unaffected. Keep the 8-row tile for wide heads on GCN.
+    const bool reduce_block_rows_gcn = device->architecture == AMD_GCN && D >= 512;
+
     if (n_rows == 1) {
         result.block_rows = 1;
         result.block_cols = 64;
@@ -1244,7 +1250,7 @@ static vk_fa_tuning_params get_fa_tuning_params_scalar(const vk_device& device, 
         if (result.row_split == 1) {
             result.block_rows = n_rows == 2 ? 2 : ((n_rows <= 4 || reduce_block_rows) ? 4 : 8);
         } else {
-            result.block_rows = n_rows <= 4 ? 4 : ((n_rows <= 8 || reduce_block_rows) ? 8 : 16);
+            result.block_rows = n_rows <= 4 ? 4 : ((n_rows <= 8 || reduce_block_rows || reduce_block_rows_gcn) ? 8 : 16);
         }
 
         result.block_cols = (D & 8) ? 64 : 32;
